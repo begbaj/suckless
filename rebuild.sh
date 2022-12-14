@@ -14,9 +14,9 @@ make -C ./slock/src/
 make -C ./surf/src/
 make -C ./quark/src/
 
-sudo make install -C ./st/st/
-sudo make install -C ./dmenu/dmenu/
-sudo make install -C ./dwm/dwm/
+sudo make install -C ./st/src/
+sudo make install -C ./dmenu/src/
+sudo make install -C ./dwm/src/
 sudo make install -C ./slock/src/
 sudo make install -C ./surf/src/
 sudo make install -C ./quark/src/
