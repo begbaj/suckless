@@ -1,4 +1,3 @@
-
 #!/bin/sh
 make clean -C ./st/src/
 make clean -C ./dmenu/src/
@@ -20,6 +19,10 @@ sudo make install -C ./dwm/src/
 sudo make install -C ./slock/src/
 sudo make install -C ./surf/src/
 sudo make install -C ./quark/src/
+
+mkdir ~/.local/bin/
+sudo cp dwm/dwm.desktop /usr/share/xsessions/dwm.desktop
+cp dwm/scripts/startdwm ~/.local/bin/startdwm
 
 killall rsblocks
 killall dwm
