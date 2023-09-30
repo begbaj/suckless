@@ -26,3 +26,25 @@ cp dwm/scripts/startdwm ~/.local/bin/startdwm
 
 killall rsblocks
 killall dwm
+
+while [[ $# -gt 0 ]]; do
+	key="$1"
+	case $key in
+		--clean)
+			arg_foo="$2"
+			shift # Consume the argument value
+			make clean -C ./st/src/
+			make clean -C ./dmenu/src/
+			make clean -C ./dwm/src/
+			make clean -C ./slock/src/
+			make clean -C ./surf/src/
+			make clean -C ./quark/src/
+		;;
+		*)
+			echo "Unknown option: $key" >&2
+			exit 1
+		;;
+	esac
+	shift # Consume the option or argument
+done
+
